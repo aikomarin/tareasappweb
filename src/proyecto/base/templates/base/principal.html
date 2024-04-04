@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Pendientes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #003049;
+            font-family: "Abel", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            padding-top: 60px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #669BBC;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Lato", sans-serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        h1 {
+            color: #FFFFFF;
+        }
+
+        p {
+            color: #003049;
+        }
+
+        a {
+            text-decoration: none;
+            color: #C1121F;
+        }
+
+        a:hover {
+            cursor: pointer;
+            color: #003049;
+        }
+
+        #usuario {
+            font-family: "Lato", sans-serif;
+            font-weight: 700;
+            font-style: italic;
+            color: #FFFFFF;
+        }
+
+        .barra-superior {
+            display: flex;
+            justify-content: space-between;
+            color: #FFFFFF;
+            padding: 10px;
+            border-radius: 5px 5px 0 0;
+            background: linear-gradient(90deg, #E86060 0%, #DC2424 43%, #780000 100%);
+            text-decoration: none;
+        }
+
+        .barra-superior a {
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+
+        .envoltorio-tarea {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #FFFFFF;
+            border-top: 1px solid rgb(225, 225, 225);
+        }
+
+        .titulo-tarea {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .titulo-tarea a {
+            display: flex;
+            color: #003049;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        .titulo-tarea a:hover {
+            cursor: pointer;
+            color: #669BBC;
+        }
+
+        .icono-tarea-completa {
+            height: 20px;
+            width: 20px;
+            background-color: rgb(105, 162, 105);
+            border-radius: 50px;
+        }
+
+        .icono-tarea-incompleta {
+            height: 20px;
+            width: 20px;
+            background-color: rgb(218, 218, 218);
+            border-radius: 50px;
+        }
+
+        .enlace-eliminar {
+            color: #C1121F;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 22px;
+            line-height: 0;
+        }
+
+        .enlace-eliminar:hover {
+            cursor: pointer;
+        }
+
+        #envoltorio-agregar-buscar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        #enlace-agregar {
+            color: #C1121F;
+            text-decoration: none;
+            font-size: 35px;
+            text-shadow: 1px 1px #81413B;
+        }
+
+        input[type=text],
+        input[type=password],
+        textarea {
+            border: 1px solid #003049;
+            border-radius: 5px;
+            padding: 10px;
+            width: 90%;
+            font-family: "Lato", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        label {
+            padding-top: 10px !important;
+            display: block;
+        }
+
+        .boton {
+            border: 1px solid #003049;
+            background-color: #FFFFFF;
+            color: #003049;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-family: "Lato", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        #boton-salir {
+            border: 1px solid #E86060;
+            background-color: #E86060;
+            color: #FFFFFF;
+            padding: 8px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-family: "Lato", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .cuerpo-tarjeta {
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% block content %}
+        {% endblock content %}
+    </div>
+</body>
+</html>
